@@ -1,0 +1,23 @@
+import api from "./api";
+
+const reportService = {
+  getPatients: async () =>
+    (await api.get("/api/reports/patients")).data,
+
+  getAppointments: async () =>
+    (await api.get("/api/reports/appointments")).data,
+
+  getFinancial: async () =>
+    (await api.get("/api/reports/financial")).data,
+
+  getPharmacy: async () =>
+    (await api.get("/api/reports/pharmacy")).data,
+
+  getLaboratory: async () =>
+    (await api.get("/api/reports/laboratory")).data,
+
+  getAdmissions: async () =>
+    (await api.get("/api/reports/admissions")).data,
+};
+
+export default reportService;

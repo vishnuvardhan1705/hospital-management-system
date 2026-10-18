@@ -1,0 +1,156 @@
+.clinical-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 24px;
+  min-width: 0;
+}
+
+.clinical-heading h1 {
+  margin: 0;
+}
+
+.clinical-heading p {
+  margin: 7px 0 0;
+  color: var(--text-secondary, #6b7280);
+  line-height: 1.5;
+}
+
+.clinical-panel {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 12px;
+  background: var(--card-background, #ffffff);
+}
+
+.clinical-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.clinical-section-heading h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.clinical-section-heading p {
+  margin: 6px 0 0;
+  color: var(--text-secondary, #6b7280);
+  font-size: 14px;
+}
+
+.clinical-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.clinical-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.clinical-form input,
+.clinical-form select,
+.clinical-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid var(--border-color, #d1d5db);
+  border-radius: 7px;
+  background: var(--input-background, #ffffff);
+  color: var(--text-color, #111827);
+  font: inherit;
+  font-weight: 400;
+}
+
+.clinical-form input:focus,
+.clinical-form select:focus,
+.clinical-form textarea:focus {
+  outline: 2px solid var(--primary-color, #2563eb);
+  outline-offset: 1px;
+}
+
+.clinical-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.clinical-full-width {
+  grid-column: 1 / -1;
+}
+
+.clinical-actions {
+  display: flex;
+  align-items: end;
+}
+
+.clinical-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--primary-color, #2563eb);
+  color: #ffffff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clinical-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.clinical-alert {
+  margin-bottom: 18px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.clinical-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.clinical-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+@media (max-width: 900px) {
+  .clinical-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .clinical-page {
+    padding: 14px;
+  }
+
+  .clinical-panel {
+    padding: 15px;
+  }
+
+  .clinical-form {
+    grid-template-columns: 1fr;
+  }
+
+  .clinical-full-width {
+    grid-column: auto;
+  }
+}

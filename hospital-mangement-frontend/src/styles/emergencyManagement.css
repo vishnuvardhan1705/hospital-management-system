@@ -1,0 +1,343 @@
+.emergency-page {
+  padding: 24px;
+  color: var(--text-primary, #1f2937);
+}
+
+.emergency-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.emergency-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.emergency-header p,
+.emergency-help {
+  color: var(--text-secondary, #6b7280);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.emergency-secondary-btn,
+.emergency-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.emergency-primary-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.emergency-primary-btn:hover {
+  background: #1d4ed8;
+}
+
+.emergency-primary-btn:disabled,
+.emergency-secondary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.emergency-secondary-btn {
+  background: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.emergency-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.emergency-stat-card {
+  padding: 18px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 12px;
+  background: var(--card-background, #fff);
+}
+
+.emergency-stat-card span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary, #6b7280);
+  font-size: 13px;
+}
+
+.emergency-stat-card strong {
+  font-size: 26px;
+}
+
+.emergency-alert {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  line-height: 1.5;
+}
+
+.emergency-alert.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.emergency-alert.success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.emergency-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.emergency-tabs button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  color: var(--text-secondary, #6b7280);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.emergency-tabs button.active {
+  color: #2563eb;
+  border-bottom-color: #2563eb;
+}
+
+.emergency-panel {
+  margin-bottom: 24px;
+  padding: 22px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 12px;
+  background: var(--card-background, #fff);
+}
+
+.emergency-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 20px;
+  font-size: 19px;
+}
+
+.emergency-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.emergency-form label,
+.emergency-inline-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.emergency-form input,
+.emergency-form select,
+.emergency-form textarea,
+.emergency-inline-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid var(--input-border, #d1d5db);
+  border-radius: 7px;
+  background: var(--input-background, #fff);
+  color: var(--text-primary, #1f2937);
+  font: inherit;
+  font-weight: 400;
+}
+
+.emergency-form input:focus,
+.emergency-form select:focus,
+.emergency-form textarea:focus,
+.emergency-inline-form input:focus {
+  outline: 2px solid #bfdbfe;
+  border-color: #2563eb;
+}
+
+.emergency-form textarea {
+  resize: vertical;
+}
+
+.emergency-form .full-width {
+  grid-column: 1 / -1;
+}
+
+.emergency-form > .emergency-primary-btn {
+  justify-self: start;
+}
+
+.emergency-selected-patient {
+  padding: 12px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1e40af;
+  line-height: 1.7;
+}
+
+.emergency-inline-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+  max-width: 540px;
+  margin-bottom: 20px;
+}
+
+.emergency-inline-form label {
+  flex: 1;
+}
+
+.emergency-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.emergency-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.emergency-table th,
+.emergency-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  text-align: left;
+  vertical-align: top;
+}
+
+.emergency-table th {
+  background: var(--table-header-background, #f9fafb);
+  color: var(--text-secondary, #4b5563);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.emergency-table tbody tr:hover {
+  background: var(--table-hover-background, #f9fafb);
+}
+
+.emergency-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-width: 180px;
+}
+
+.emergency-actions button {
+  padding: 6px 9px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  color: #374151;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.emergency-actions button:hover {
+  background: #eff6ff;
+  border-color: #93c5fd;
+}
+
+.emergency-priority,
+.emergency-status {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.emergency-priority.critical {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.emergency-priority.high {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.emergency-priority.medium {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.emergency-priority.low {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.emergency-empty {
+  padding: 18px 0;
+  color: var(--text-secondary, #6b7280);
+}
+
+@media (max-width: 900px) {
+  .emergency-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .emergency-page {
+    padding: 14px;
+  }
+
+  .emergency-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .emergency-stats,
+  .emergency-form {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-form .full-width {
+    grid-column: auto;
+  }
+
+  .emergency-panel {
+    padding: 15px;
+  }
+
+  .emergency-inline-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .emergency-tabs button {
+    padding: 10px;
+  }
+}

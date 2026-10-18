@@ -1,0 +1,238 @@
+.consultations-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 24px;
+  min-width: 0;
+}
+
+.consultations-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.consultations-heading h1,
+.consultation-section-heading h2 {
+  margin: 0;
+}
+
+.consultations-heading p,
+.consultation-section-heading p {
+  margin: 7px 0 0;
+  color: var(--text-secondary, #6b7280);
+}
+
+.consultation-panel {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 12px;
+  background: var(--card-background, #ffffff);
+}
+
+.consultation-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.consultation-search-form {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.consultation-search-form label,
+.consultation-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.consultation-search-form label {
+  width: min(100%, 320px);
+}
+
+.consultation-search-form input,
+.consultation-form input,
+.consultation-form select,
+.consultation-form textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid var(--border-color, #d1d5db);
+  border-radius: 7px;
+  background: var(--input-background, #ffffff);
+  color: var(--text-color, #111827);
+  font: inherit;
+}
+
+.consultation-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.consultation-form input:disabled {
+  background: var(--table-header-background, #f9fafb);
+  opacity: 0.8;
+}
+
+.consultation-search-form button,
+.consultation-form-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 11px 15px;
+  border: 0;
+  border-radius: 7px;
+  background: var(--primary-color, #2563eb);
+  color: #ffffff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.consultation-search-form button:disabled,
+.consultation-form-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.consultation-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.consultation-full-width {
+  grid-column: 1 / -1;
+}
+
+.consultation-checkbox {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 10px !important;
+}
+
+.consultation-checkbox input {
+  width: auto;
+}
+
+.consultation-form-actions {
+  display: flex;
+  align-items: end;
+}
+
+.consultation-alert {
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.consultation-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.consultation-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.consultation-empty {
+  padding: 18px 0;
+  text-align: center;
+  color: var(--text-secondary, #6b7280);
+}
+
+.consultation-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.consultation-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+.consultation-table th,
+.consultation-table td {
+  padding: 13px 12px;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  white-space: nowrap;
+}
+
+.consultation-table th {
+  background: var(--table-header-background, #f9fafb);
+  font-weight: 700;
+}
+
+.consultation-link {
+  display: inline-flex;
+  width: fit-content;
+  padding: 9px 12px;
+  border-radius: 7px;
+  background: var(--secondary-button-background, #f3f4f6);
+  color: var(--text-color, #111827);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.diagnosis-form {
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color, #e5e7eb);
+}
+
+@media (max-width: 850px) {
+  .consultation-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .consultations-page {
+    padding: 14px;
+  }
+
+  .consultation-panel {
+    padding: 15px;
+  }
+
+  .consultations-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .consultation-search-form {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .consultation-search-form label {
+    width: 100%;
+  }
+
+  .consultation-form {
+    grid-template-columns: 1fr;
+  }
+
+  .consultation-full-width {
+    grid-column: auto;
+  }
+}
